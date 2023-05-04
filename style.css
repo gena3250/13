@@ -1,0 +1,254 @@
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		  url('../fonts/open-sans-v28-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+		  url('../fonts/open-sans-v28-latin-regular.woff') format('woff'), /* Modern Browsers */
+ }
+ /* open-sans-600 - latin */
+ @font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 600;
+	src: local(''),
+		  url('../fonts/open-sans-v28-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+		  url('../fonts/open-sans-v28-latin-600.woff') format('woff'), /* Modern Browsers */
+ }
+*{
+	box-sizing: border-box;
+}
+ html{
+	font-family: 'Open Sans', normal;
+	font-weight: 400;
+
+}
+body{
+	margin: 0;
+}
+ul{
+	padding: 0;
+	margin: 0;
+}
+li{
+	list-style-type: none;	
+}
+.one{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	height: 640px;
+	width: 100%;
+	padding-left: 92px;
+	padding-top: 70px;
+	padding-right: 36px;
+	background-color: #E5E5E5;
+}
+
+.main-check{
+	width: 176px;
+	padding-left: 30px;
+	padding-top: 21px;
+	padding-bottom: 29px;
+	background-color: #fff;
+	border-radius: 10px;
+	font-size: 14px;
+	line-height: 19px;
+}
+
+label{
+	position: relative;
+	cursor: pointer;
+	padding-left: 15px;
+}
+input[type="checkbox"]{
+	display: none;
+}
+
+input[type="checkbox"]+ span{
+	position: absolute;
+	top: 0;
+	left: -9px;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	border: 1px solid #CCB26E;
+	border-radius: 3px;
+
+}
+
+input[type="checkbox"]+ span:before{
+	position: absolute;
+	content: url(/img/check.svg);
+	top: -4px;
+	right: 0;
+	bottom: 0;
+	left: 1px;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+	color: #CCB26E;
+}
+
+input[type="checkbox"]:checked+ span:before{
+	opacity: 1;
+}
+#select{
+	font-size: 14px;
+	line-height: 19px;
+	
+}
+
+.main-select{
+	
+}
+.choices__inner{
+	width: 176px;
+	border: 1px solid #CCB26E;
+	border-radius: 10px;
+}
+.check-item:not(:last-child){
+	margin-bottom: 20px;
+}
+
+#choices--select-item-choice-5{
+	display: none;
+}
+
+.choices[data-type*=select-one]::after {
+	left: 150px;
+	right: 0;	
+}
+
+
+.choices__list--dropdown, .choices__list[aria-expanded]{
+	width: 176px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	border-color: #CCB26E;
+}
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+	padding-right:0;
+	background-color: #fff;
+}
+
+.choices__list--dropdown{
+	background-color: #fff;
+}
+.choices__list .choices__list--dropdown{
+	/* border-radius: 15px; */
+}
+.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+	background-color: #fff;
+}
+.is-focused .choices__inner,.is-open .choices__inner{
+	border-color: #CCB26E;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+.is-open .choices__list--dropdown, .is-open .choices__list[atia-expanded]{
+	border-color: #CCB26E !important;
+}
+
+
+[class*="ground-pane"]{
+	filter: grayscale(1);
+}
+
+.castomScroll{
+	padding: 20px 30px 0 29px;
+	width: 400px;
+	max-height: 310px;
+	text-align: left;
+	background-color: #fff;
+	font-size: 14px;
+	line-height: 24px;
+	color: #333;
+}
+
+.form-action{
+	background: #000000;
+	opacity: 0.8;
+	border-radius: 10px;
+	padding: 39px 30px;
+}
+
+input{
+	display: block;
+	width: 380px;
+	height: 60px;
+	margin-bottom: 31px;
+	padding-left: 20px;
+	background: #FFFFFF;
+	border: 1px solid #FF5C00;
+	border-radius: 10px;
+	line-height: 19px;
+}
+
+button{
+	padding: 18.5px 53px;
+	background-color: #FF5C00;
+	border-radius: 10px;
+	font-size: 20px;
+	line-height: 23px;
+	color: #fff;
+
+}
+
+
+
+.tooltip{
+	width: 375px;
+}
+
+.tooltip__item{
+	
+	margin-bottom: 29px;
+	padding: 20px 78px 20px 29px;
+	background-color: #fff;
+	font-size: 14px;
+	line-height: 170%;
+}
+
+.tooltip-icon{
+	position:relative;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;		
+}
+.tooltip-icon::after{
+	content: 'Глава 2, страница 147';
+	position: absolute;
+	background-color: #5B46A9;
+	z-index: 1;
+	top: -350%;
+	left:-82px;	
+	opacity: 0;
+	width: 163px;
+	padding: 7px 15px;
+	transition: opacity .3s ease-in-out;
+	color: #fff;
+	visibility: hidden;
+}
+.tooltip-icon::before{
+	content: '';
+   position: absolute;
+   border: 16px solid transparent; 
+	border-top: 16px solid #5B46A9;
+	top: -150%;
+	left: -50%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+ }
+ 
+.tooltip-icon:hover::after,
+.tooltip-icon:focus::after,
+.tooltip-icon:hover::before,
+.tooltip-iconfocus::before
+{
+	opacity: 1;	
+	visibility: visible;
+}
